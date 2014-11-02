@@ -1,0 +1,16 @@
+{
+  "name": "finance",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Screen scrape sites to pull together relevant information",
+  "main": "finance.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Smejko",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.1",
+    "express-handlebars": "^1.1.0"
+  }
+}
