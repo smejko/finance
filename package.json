@@ -3,14 +3,27 @@
   "version": "0.0.1",
   "private": true,
   "description": "Screen scrape sites to pull together relevant information",
-  "main": "finance.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smejko/finance.git"
   },
   "author": "Nick Smejko",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.0",
+    "debug": "^2.1.0",
     "express": "^4.10.1",
-    "express-handlebars": "^1.1.0"
+    "express-handlebars": "^1.1.0",
+    "jquery": "^1.8.3",
+    "morgan": "^1.4.1",
+    "request": "^2.47.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-exec": "^0.4.6"
   }
 }

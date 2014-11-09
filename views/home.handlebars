@@ -1,1 +1,11 @@
 <h1>Welcome to Nick's Finance Information</h1>
+{{#each model}}
+<p>{{Company}}</p>
+<ul>
+	{{#each Headlines}}
+	<li>
+		{{Date}} <a href='{{Link}}'>{{Title}}</a> 
+	</li>
+	{{/each}}
+</ul>
+{{/each}}
