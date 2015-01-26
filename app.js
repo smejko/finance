@@ -13,11 +13,15 @@ var handlebars = require('express-handlebars')
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-app.use(logger('dev'));
+app.use(logger('common'));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
 app.get('/', index);
+
+app.get('/favicon.ico', function(req, res) {
+	res.sendFile(path.join(__dirname, '/favicon.ico'));
+});
 
 app.get('/about', function(req, res) {
 	res.render('about', { date: new Date() });
@@ -36,7 +40,7 @@ app.use(function(err, req, res, next){
 });
 
 // Start service
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 
 app.listen(app.get('port'), function() {
 	debug('Express started on http://localhost:' + 

@@ -1,11 +1,14 @@
-<h1>Welcome to Nick's Finance Information</h1>
+<h1>Company News</h1>
 {{#each model}}
-<p>{{Company}}</p>
-<ul>
-	{{#each Headlines}}
-	<li>
-		{{Date}} <a href='{{Link}}'>{{Title}}</a> 
-	</li>
-	{{/each}}
-</ul>
+<h2>{{Company}}</h2>
+<div class="row">
+	{{#if Error}}
+		<div class="col-sm-12">{{Error}}</div>
+	{{else}}
+		{{#each Headlines}}
+			<div class="col-sm-2">{{Date}}</div>
+			<div class="col-sm-10"><a href='{{Link}}'>{{Title}}</a> </div>
+		{{/each}}
+	{{/if}}
+</div>
 {{/each}}
